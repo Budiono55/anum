@@ -7,19 +7,19 @@
 #include <math.h>
 
 /*--- Calculate from t=0 to t=T ---*/
-#define T   1.0
+#define T   5.0
 
 /*--- Initial data ---*/
-#define X0   1.0
+#define X0   2.0
 
 /*--- parameter(s) ---*/
 #define A  1.0
 
 /*--- division number ---*/
-#define N    100
+#define N    1000
 
 /*---  f(t,x)  ---*/
-double f(double t, double x) { return A*x; }
+double f(double t, double x) { return x - x * x; }
 
 /*--- Exact solution ---*/
 double ExactSol(double t) { return exp(A*t); }
