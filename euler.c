@@ -18,11 +18,13 @@
 /*--- division number ---*/
 #define N    1000
 
+double C = X0 / (1.0 - X0); // Constant C based on initial condition
+
 /*---  f(t,x)  ---*/
 double f(double t, double x) { return x - x * x; }
 
 /*--- Exact solution ---*/
-double ExactSol(double t) { return exp(A*t); }
+double ExactSol(double t) { return (C * exp(t)) / (1.0 + C * exp(t)); }
 
 
 /*--- main ---*/

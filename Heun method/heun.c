@@ -5,7 +5,7 @@
 #define T   5.0
 
 /*--- Initial data ---*/
-#define X0   2.0
+#define X0   2
 
 /*--- parameter(s) ---*/
 #define A  1.0
@@ -13,11 +13,13 @@
 /*--- division number ---*/
 #define N    1000
 
+double C = X0 / (1.0 - X0); // Constant C based on initial condition
+
 /*---  f(t,x)  ---*/
 double f(double t, double x) { return x - x * x; }
 
 /*--- Exact solution ---*/
-double ExactSol(double t) { return exp(A*t); }
+double ExactSol(double t) { return (C * exp(t)) / (1.0 + C * exp(t)); }
 
 /*--- main ---*/
 /*
