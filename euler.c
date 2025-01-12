@@ -54,6 +54,8 @@ int main(void)
     /* display t_n, X_n, x(t_n) and |e_n| */
     printf("%6.4f      %16.14f   %16.14f  %16.10e\n",
            t, x, ExactSol(t), en); 
+
+    // Euler method
     x=x+h*f(t,x);  // X_{n+1}=X_n + h * f(t_n, X_n)
     
   }
