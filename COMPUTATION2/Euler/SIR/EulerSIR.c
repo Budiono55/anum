@@ -21,7 +21,7 @@
 #define GAMMA 0.1  // Recovery rate
 
 /*--- Division number ---*/
-#define N    100
+#define N    1000
 
 /*--- Right-hand sides of the equations: f(t,S,I,R), g(t,S,I,R), h(t,S,I,R) ---*/
 double f(double S, double I) { return -BETA * S * I; }
